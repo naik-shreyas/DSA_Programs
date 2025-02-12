@@ -17,6 +17,6 @@ public class Counter {
     }
 
     public String toString() {
-        return name + ":" + value
+        return name + ":" + value;
     }
 }
