@@ -29,7 +29,7 @@ public class CircularLinkedList {
         if (isEmpty()) {
             first = newNode;
         }
-      //  last.next = newNode;
+        last.next = newNode;
         last = newNode;
     }
 
@@ -39,7 +39,7 @@ public class CircularLinkedList {
         if (first == null) {
             last = null;
         }
-       // first = first.next;
+        first = first.next;
         return temp;
     }
 
@@ -48,7 +48,7 @@ public class CircularLinkedList {
         Node current = first;
         while (current != null) {
             current.displayNode();
-           // current = current.next;
+            current = current.next;
         }
     }
 
