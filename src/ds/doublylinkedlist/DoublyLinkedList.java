@@ -37,4 +37,28 @@ public class DoublyLinkedList {
         newNode.previous = last;
         this.last = newNode;
     }
+
+    //assume non-empty list
+    public Node deleteFirst() {
+        Node temp = first;
+        if (first.next == null) {
+            last = null;
+        } else {
+            first.next.previous = null;
+        }
+        first = first.next;
+        return temp;
+    }
+
+    //assume non-empty list
+    public Node deleteLast() {
+        Node temp = last;
+        if (first.next == null) {
+            first = null;
+        } else {
+            last.previous.next = null;
+        }
+        last = last.previous;
+        return temp;
+    }
 }
