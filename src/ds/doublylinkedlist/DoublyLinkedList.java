@@ -24,4 +24,17 @@ public class DoublyLinkedList {
         newNode.next = first;
         this.first = newNode;
     }
+
+    public void insertLast(int data) {
+        Node newNode = new Node();
+        newNode.data = data;
+        if (isEmpty()) {
+            first = newNode;
+        } else {
+            last.next = newNode;
+        }
+
+        newNode.previous = last;
+        this.last = newNode;
+    }
 }
