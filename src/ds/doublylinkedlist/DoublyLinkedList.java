@@ -61,4 +61,29 @@ public class DoublyLinkedList {
         last = last.previous;
         return temp;
     }
+
+    //assume non-empty list
+    public boolean insertAfter(int key, int data) {
+        Node newNode = new Node();
+        newNode.data = data;
+
+        Node current = first;
+
+        while (current.data != key) {
+            current = current.next;
+            if (current == null) {
+                return false;
+            }
+        }
+
+        if (current.next == null) {
+            last = newNode;
+            newNode.next = null;
+        } else {
+            newNode.next = current.next;
+            current.next.previous = newNode;
+        }
+        current.next = newNode;
+        newNode.previous = current;
+    }
 }
