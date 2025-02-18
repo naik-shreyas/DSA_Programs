@@ -63,7 +63,7 @@ public class DoublyLinkedList {
     }
 
     //assume non-empty list
-    public boolean insertAfter(int key, int data) {
+ /*   public boolean insertAfter(int key, int data) {
         Node newNode = new Node();
         newNode.data = data;
 
@@ -86,4 +86,5 @@ public class DoublyLinkedList {
         current.next = newNode;
         newNode.previous = current;
     }
+*/
 }
