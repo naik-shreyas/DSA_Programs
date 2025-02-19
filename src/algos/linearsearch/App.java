@@ -11,6 +11,7 @@ public class App {
         int input = sc.nextInt();
 
         int[] a = {1, 2, 3, 4, 5};
+        System.out.println("Position of key in array: ");
         System.out.println(linearSearch(a, input));
 
 
